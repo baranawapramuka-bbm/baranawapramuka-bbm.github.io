@@ -1,1700 +1,1032 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BARANAWA | Ambalan</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="https://pelajarnu.programingcilegeh.my.id/uploads/avatar/avatar_8_1782762268.jpeg">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-background:
-linear-gradient(135deg,#020617,#0f172a,#1e293b);
-
-color:white;
-
-overflow-x:hidden;
-
-}
-
-/*============================*/
-
-body::before{
-
-content:'';
-
-position:fixed;
-
-width:700px;
-
-height:700px;
-
-background:#2563eb;
-
-filter:blur(250px);
-
-top:-250px;
-
-left:-250px;
-
-opacity:.35;
-
-z-index:-2;
-
-}
-
-body::after{
-
-content:'';
-
-position:fixed;
-
-width:700px;
-
-height:700px;
-
-background:#7c3aed;
-
-filter:blur(250px);
-
-bottom:-250px;
-
-right:-250px;
-
-opacity:.35;
-
-z-index:-2;
-
-}
-
-/*============================*/
-
-.container{
-
-width:90%;
-
-max-width:1200px;
-
-margin:auto;
-
-}
-
-/*============================*/
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-backdrop-filter:blur(18px);
-
-background:rgba(255,255,255,.05);
-
-border-bottom:1px solid rgba(255,255,255,.1);
-
-z-index:999;
-
-transition:.4s;
-
-}
-
-header .container{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px 0;
-
-}
-
-.logo{
-
-font-size:30px;
-
-font-weight:800;
-
-letter-spacing:3px;
-
-color:#4cc9f0;
-
-}
-
-nav ul{
-
-display:flex;
-
-list-style:none;
-
-gap:35px;
-
-}
-
-nav ul li a{
-
-text-decoration:none;
-
-color:white;
-
-font-weight:500;
-
-transition:.4s;
-
-}
-
-nav ul li a:hover{
-
-color:#4cc9f0;
-
-}
-
-/*============================*/
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-}
-
-.hero .container{
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:80px;
-
-}
-
-.hero-text{
-
-flex:1;
-
-animation:fadeLeft 1.2s;
-
-}
-
-.hero-text h4{
-
-font-size:20px;
-
-color:#4cc9f0;
-
-margin-bottom:15px;
-
-}
-
-.hero-text h1{
-
-font-size:70px;
-
-font-weight:800;
-
-margin-bottom:20px;
-
-}
-
-.hero-text h2{
-
-font-size:30px;
-
-font-weight:600;
-
-color:#cbd5e1;
-
-margin-bottom:20px;
-
-}
-
-.hero-text p{
-
-line-height:2;
-
-font-size:17px;
-
-color:#d1d5db;
-
-margin-bottom:35px;
-
-}
-
-.btn{
-
-display:inline-block;
-
-padding:15px 40px;
-
-border-radius:50px;
-
-background:linear-gradient(45deg,#2563eb,#4cc9f0);
-
-text-decoration:none;
-
-color:white;
-
-font-weight:600;
-
-transition:.4s;
-
-box-shadow:0 0 30px rgba(76,201,240,.5);
-
-}
-
-.btn:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 0 50px rgba(76,201,240,.8);
-
-}
-
-/*============================*/
-
-.hero-image{
-
-flex:1;
-
-display:flex;
-
-justify-content:center;
-
-animation:fadeRight 1.2s;
-
-}
-
-.hero-image img{
-
-width:380px;
-
-height:380px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-padding:8px;
-
-background:linear-gradient(45deg,#4cc9f0,#2563eb,#7c3aed);
-
-box-shadow:
-
-0 0 50px #2563eb,
-
-0 0 100px #4cc9f055;
-
-}
-
-/*============================*/
-
-section{
-
-padding:120px 0;
-
-}
-
-.title{
-
-font-size:40px;
-
-text-align:center;
-
-margin-bottom:20px;
-
-font-weight:700;
-
-}
-
-.subtitle{
-
-text-align:center;
-
-color:#cbd5e1;
-
-margin-bottom:60px;
-
-}
-
-/*============================*/
-
-.glass{
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
-
-border-radius:25px;
-
-padding:40px;
-
-box-shadow:
-
-0 15px 35px rgba(0,0,0,.3);
-
-}
-
-/*============================*/
-
-.about-content{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
-align-items:center;
-
-}
-
-.about-content p{
-
-line-height:2;
-
-color:#d1d5db;
-
-}
-
-/*============================*/
-
-.timeline{
-
-display:flex;
-
-flex-direction:column;
-
-gap:25px;
-
-}
-
-.timeline .item{
-
-display:flex;
-
-gap:20px;
-
-align-items:center;
-
-padding:20px;
-
-background:rgba(255,255,255,.05);
-
-border-radius:18px;
-
-transition:.4s;
-
-}
-
-.timeline .item:hover{
-
-transform:translateX(15px);
-
-background:rgba(37,99,235,.2);
-
-}
-
-.timeline .icon{
-
-width:65px;
-
-height:65px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-background:#2563eb;
-
-font-size:25px;
-
-}
-
-/*============================*/
-
-.skills{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
-}
-
-.skill-card{
-
-padding:30px;
-
-border-radius:20px;
-
-background:rgba(255,255,255,.05);
-
-transition:.4s;
-
-}
-
-.skill-card:hover{
-
-transform:translateY(-10px);
-
-background:rgba(76,201,240,.15);
-
-}
-
-.bar{
-
-margin-top:20px;
-
-height:12px;
-
-background:#0f172a;
-
-border-radius:50px;
-
-overflow:hidden;
-
-}
-
-.bar span{
-
-display:block;
-
-height:100%;
-
-background:linear-gradient(90deg,#2563eb,#4cc9f0);
-
-border-radius:50px;
-
-}
-
-/*============================*/
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-}
-
-.gallery img{
-
-width:100%;
-
-height:250px;
-
-object-fit:cover;
-
-border-radius:20px;
-
-transition:.4s;
-
-cursor:pointer;
-
-}
-
-.gallery img:hover{
-
-transform:scale(1.05);
-
-}
-
-/*============================*/
-
-.contact{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-gap:30px;
-
-}
-
-.contact .card{
-
-padding:35px;
-
-text-align:center;
-
-background:rgba(255,255,255,.05);
-
-border-radius:20px;
-
-transition:.4s;
-
-}
-
-.contact .card:hover{
-
-background:#2563eb;
-
-transform:translateY(-8px);
-
-}
-
-.contact i{
-
-font-size:35px;
-
-margin-bottom:20px;
-
-}
-
-/*============================*/
-
-footer{
-
-padding:35px;
-
-text-align:center;
-
-background:rgba(255,255,255,.05);
-
-margin-top:100px;
-
-border-top:1px solid rgba(255,255,255,.1);
-
-}
-
-/*============================*/
-
-@keyframes fadeLeft{
-
-from{
-
-opacity:0;
-
-transform:translateX(-50px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateX(0);
-
-}
-
-}
-
-@keyframes fadeRight{
-
-from{
-
-opacity:0;
-
-transform:translateX(50px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateX(0);
-
-}
-
-}
-
-/*============================*/
-
-/* ===========================================
-   RESPONSIVE
-=========================================== */
-
-/* Laptop Besar */
-@media (min-width:1400px){
-
-.container{
-max-width:1350px;
-}
-
-.hero-text h1{
-font-size:90px;
-}
-
-.hero-text h2{
-font-size:40px;
-}
-
-.hero-image img{
-width:450px;
-height:450px;
-}
-
-}
-
-
-/* Laptop */
-@media (max-width:1200px){
-
-.hero-text h1{
-font-size:60px;
-}
-
-.hero-image img{
-width:330px;
-height:330px;
-}
-
-}
-
-
-/* Tablet */
-@media (max-width:992px){
-
-.container{
-width:92%;
-}
-
-.hero{
-padding-top:120px;
-height:auto;
-padding-bottom:80px;
-}
-
-.hero .container{
-
-flex-direction:column-reverse;
-
-text-align:center;
-
-gap:50px;
-
-}
-
-.hero-image img{
-
-width:280px;
-
-height:280px;
-
-}
-
-.hero-text h1{
-
-font-size:48px;
-
-}
-
-.hero-text h2{
-
-font-size:24px;
-
-}
-
-.hero-text p{
-
-font-size:16px;
-
-}
-
-.about-content{
-
-grid-template-columns:1fr;
-
-}
-
-.about-content img{
-
-margin-top:30px;
-
-}
-
-.skills{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.gallery{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.contact{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-/* Mobile */
-@media (max-width:768px){
-
-header .container{
-
-padding:18px;
-
-}
-
-.logo{
-
-font-size:24px;
-
-}
-
-nav{
-
-display:none;
-
-}
-
-.hero{
-
-padding-top:120px;
-
-}
-
-.hero-image img{
-
-width:220px;
-
-height:220px;
-
-}
-
-.hero-text h4{
-
-font-size:16px;
-
-}
-
-.hero-text h1{
-
-font-size:38px;
-
-}
-
-.hero-text h2{
-
-font-size:20px;
-
-}
-
-.hero-text p{
-
-font-size:15px;
-
-line-height:1.8;
-
-}
-
-.btn{
-
-padding:14px 28px;
-
-font-size:14px;
-
-}
-
-section{
-
-padding:80px 0;
-
-}
-
-.title{
-
-font-size:32px;
-
-}
-
-.subtitle{
-
-font-size:15px;
-
-margin-bottom:35px;
-
-}
-
-.glass{
-
-padding:25px;
-
-}
-
-.timeline .item{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-.timeline .icon{
-
-margin-bottom:10px;
-
-}
-
-.skills{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery{
-
-grid-template-columns:1fr;
-
-}
-
-.gallery img{
-
-height:220px;
-
-}
-
-.contact{
-
-grid-template-columns:1fr;
-
-}
-
-footer{
-
-font-size:14px;
-
-padding:25px;
-
-}
-
-}
-
-
-/* HP Kecil */
-@media (max-width:480px){
-
-.hero-text h1{
-
-font-size:32px;
-
-}
-
-.hero-text h2{
-
-font-size:18px;
-
-}
-
-.hero-image img{
-
-width:180px;
-
-height:180px;
-
-}
-
-.title{
-
-font-size:28px;
-
-}
-
-.subtitle{
-
-font-size:14px;
-
-}
-
-.about-content p{
-
-font-size:14px;
-
-}
-
-.skill-card{
-
-padding:20px;
-
-}
-
-.contact .card{
-
-padding:25px;
-
-}
-
-#topBtn{
-
-width:45px;
-
-height:45px;
-
-font-size:16px;
-
-right:15px;
-
-bottom:15px;
-
-}
-}
-</style>
-
+    <title>Ambalan Baranawa | SMK Bangun Bangsa Mandiri</title>
+
+    <meta name="description"
+        content="Website resmi Ambalan Pramuka Baranawa SMK Bangun Bangsa Mandiri Kandanghaur">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(20, 20, 20, 0.95);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav .logo span {
+            color: #f1c40f;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 50px;
+
+            background:
+                linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+                url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #f1c40f;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #f1c40f;
+            color: #111;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* SECTION */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 35px;
+            color: #222;
+        }
+
+        .section-title p {
+            color: #777;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* VISI MISI */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #b8860b;
+        }
+
+        /* PROGRAM */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .program {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,.08);
+        }
+
+        .program .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .program h3 {
+            margin-bottom: 10px;
+        }
+
+        /* PRESTASI */
+        .achievement {
+            background: #222;
+            color: white;
+        }
+
+        .achievement .section-title h2 {
+            color: white;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .achievement-card {
+            background: #333;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .achievement-card h3 {
+            color: #f1c40f;
+            margin-bottom: 10px;
+        }
+        
+
+        /* GALERI */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        /* ================================
+   STRUKTUR AMBALAN
+================================ */
+
+.struktur-utama {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 25px;
+    margin: 40px 0 25px;
+    color: #b8860b;
+}
+
+.struktur-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.anggota-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+    transition: .3s;
+}
+
+.anggota-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+}
+
+.anggota-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.anggota-card.utama img {
+    height: 330px;
+}
+
+.anggota-info {
+    padding: 20px;
+}
+
+.anggota-info h3 {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.anggota-info p {
+    color: #777;
+    font-size: 14px;
+}
+
+.jabatan {
+    display: inline-block;
+    background: #f1c40f;
+    color: #111;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* RESPONSIVE STRUKTUR */
+
+@media(max-width: 800px) {
+
+    .struktur-utama {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .struktur-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .anggota-card img {
+        height: 320px;
+    }
+
+}
+
+        .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* KONTAK */
+        .contact {
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        .social {
+            margin-top: 25px;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 18px;
+            border-radius: 25px;
+            background: #f1c40f;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #080808;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 800px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .cards,
+            .program-grid,
+            .achievement-grid,
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<header>
 
-    <div class="container">
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            BARANAWA<span>⚜</span>
+        </div>
 
-        <div class="logo">BARANAWA</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#visi">Visi Misi</a></li>
+            <li><a href="#program">Kegiatan</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
 
-        <nav>
-            <ul>
-                <li><a href="#home">Profil Ambalan</a></li>
-                <li><a href="#about">Tentang BARANAWA</a></li>
-                <li><a href="#journey">Visi & Misi</a></li>
-                <li><a href="#skill">Struktur Kepengurusan</a></li>
-                <li><a href="#gallery">Galeri</a></li>
-                <li><a href="#contact">Kontak</a></li>
-            </ul>
-        </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                AMBALAN <span>BARANAWA</span>
+            </h1>
+
+            <p>
+                Pramuka SMK Bangun Bangsa Mandiri Kandanghaur
+            </p>
+
+            <p>
+                "Satyaku Kudarmakan, Darmaku Kubaktikan"
+            </p>
+
+            <a href="#about" class="btn">
+                Jelajahi Kami
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>Tentang Kami</h2>
+            <p>Mengenal lebih dekat Ambalan Baranawa</p>
+        </div>
+
+        <div class="about">
+
+            <div class="about-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80"
+                    alt="Kegiatan Pramuka">
+
+            </div>
+
+            <div class="about-text">
+
+                <h3>Ambalan Pramuka Baranawa</h3>
+
+                <p>
+                    Ambalan Baranawa merupakan organisasi kepramukaan
+                    yang berada di lingkungan SMK Bangun Bangsa Mandiri
+                    Kandanghaur.
+                </p>
+
+                <p>
+                    Kami menjadi wadah bagi para siswa untuk belajar,
+                    berkembang, bekerja sama, berorganisasi, serta
+                    membentuk karakter yang disiplin, bertanggung jawab
+                    dan berjiwa kepemimpinan.
+                </p>
+
+                <p>
+                    Melalui berbagai kegiatan kepramukaan, Ambalan
+                    Baranawa berusaha menciptakan generasi muda yang
+                    tangguh, mandiri dan siap memberikan manfaat bagi
+                    masyarakat.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VISI MISI -->
+    <section id="visi">
+
+        <div class="section-title">
+
+            <h2>Visi & Misi</h2>
+
+            <p>
+                Landasan perjuangan Ambalan Baranawa
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🎯 Visi</h3>
+
+                <p>
+                    Membentuk generasi muda yang berkarakter,
+                    disiplin, mandiri, bertanggung jawab,
+                    berjiwa kepemimpinan serta memiliki
+                    semangat pengabdian kepada masyarakat.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🚀 Misi</h3>
+
+                <p>
+                    1. Menanamkan nilai-nilai Tri Satya dan
+                    Dasa Darma Pramuka.
+                </p>
+
+                <p>
+                    2. Meningkatkan kedisiplinan dan rasa
+                    tanggung jawab anggota.
+                </p>
+
+                <p>
+                    3. Mengembangkan keterampilan dan
+                    jiwa kepemimpinan.
+                </p>
+
+                <p>
+                    4. Meningkatkan kepedulian terhadap
+                    lingkungan dan masyarakat.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROGRAM -->
+    <section id="program">
+
+        <div class="section-title">
+
+            <h2>Program & Kegiatan</h2>
+
+            <p>
+                Beberapa kegiatan Ambalan Baranawa
+            </p>
+
+        </div>
+
+
+        <div class="program-grid">
+
+            <div class="program">
+
+                <div class="icon">🏕️</div>
+
+                <h3>Perkemahan</h3>
+
+                <p>
+                    Kegiatan perkemahan untuk meningkatkan
+                    kemandirian, kekompakan dan keterampilan
+                    anggota.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="icon">🪢</div>
+
+                <h3>Latihan Rutin</h3>
+
+                <p>
+                    Latihan kepramukaan untuk meningkatkan
+                    kemampuan dan pengetahuan anggota.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="icon">🤝</div>
+
+                <h3>Bakti Sosial</h3>
+
+                <p>
+                    Kegiatan sosial sebagai bentuk kepedulian
+                    Pramuka terhadap lingkungan dan masyarakat.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="icon">🏆</div>
+
+                <h3>Perlombaan</h3>
+
+                <p>
+                    Mengikuti berbagai perlombaan Pramuka
+                    untuk meningkatkan pengalaman dan prestasi.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="icon">🌱</div>
+
+                <h3>Peduli Lingkungan</h3>
+
+                <p>
+                    Mengadakan kegiatan untuk menjaga
+                    kebersihan dan kelestarian lingkungan.
+                </p>
+
+            </div>
+
+
+            <div class="program">
+
+                <div class="icon">🔥</div>
+
+                <h3>Pengembangan Diri</h3>
+
+                <p>
+                    Membangun karakter, keberanian,
+                    kreativitas dan jiwa kepemimpinan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    
+
+
+    <!-- PRESTASI -->
+    <section class="achievement">
+
+        <div class="section-title">
+
+            <h2>Prestasi</h2>
+
+            <p>
+                Prestasi Ambalan Baranawa
+            </p>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+            <div class="achievement-card">
+
+                <h3>🏆 Juara 1</h3>
+
+                <p>
+                    Tambahkan nama perlombaan di sini
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <h3>🥈 Juara 2</h3>
+
+                <p>
+                    Tambahkan nama perlombaan di sini
+                </p>
+
+            </div>
+
+
+            <div class="achievement-card">
+
+                <h3>🥉 Juara 3</h3>
+
+                <p>
+                    Tambahkan nama perlombaan di sini
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- STRUKTUR AMBALAN -->
+<section id="struktur">
+
+    <div class="section-title">
+        <h2>Struktur Ambalan</h2>
+        <p>Susunan kepengurusan Ambalan Baranawa</p>
+    </div>
+
+    <!-- PEMBINA & PELATIH -->
+    <div class="struktur-utama">
+
+        <div class="anggota-card utama">
+            <img src="foto/pembina.jpg" alt="Pembina Ambalan">
+            <div class="anggota-info">
+                <span class="jabatan">PEMBINA</span>
+                <h3>Nama Pembina</h3>
+                <p>Ambalan Baranawa</p>
+            </div>
+        </div>
+
+        <div class="anggota-card utama">
+            <img src="foto/pelatih.jpg" alt="Pelatih Ambalan">
+            <div class="anggota-info">
+                <span class="jabatan">PELATIH</span>
+                <h3>Nama Pelatih</h3>
+                <p>Ambalan Baranawa</p>
+            </div>
+        </div>
 
     </div>
 
-</header>
 
-<!-- HERO -->
+    <!-- DEWAN AMBALAN -->
+    <h3 class="sub-title">Dewan Ambalan</h3>
 
-<section class="hero" id="home">
+    <div class="struktur-grid">
 
-<div class="container">
+        <!-- PRADANA PUTRA -->
+        <div class="anggota-card">
+            <img src="foto/pradana-putra.jpg"
+                 alt="Pradana Putra">
 
-<div class="hero-text">
+            <div class="anggota-info">
+                <span class="jabatan">
+                    PRADANA PUTRA
+                </span>
 
-<h4>Hallo, Saya</h4>
+                <h3>Nama Pradana Putra</h3>
 
-<h1>BARANAWA</h1>
+                <p>
+                    Dewan Ambalan Baranawa
+                </p>
+            </div>
+        </div>
 
-<h2>Ambalan Pramuka Penegak</h2>
 
-<p>
+        <!-- PRADANA PUTRI -->
+        <div class="anggota-card">
+            <img src="foto/pradana-putri.jpg"
+                 alt="Pradana Putri">
 
-"Ambalan Baranawa SMK Bangun Bangsa Mandiri Kandanghaur.
-    Portofolio ini disusun sebagai dokumentasi berbagai kegiatan,
-    program kerja, prestasi, serta kontribusi anggota Ambalan Baranawa
-    dalam mengembangkan karakter, kepemimpinan, kedisiplinan, dan jiwa
-    gotong royong melalui kegiatan kepramukaan.."
+            <div class="anggota-info">
+                <span class="jabatan">
+                    PRADANA PUTRI
+                </span>
 
-<br><br>
+                <h3>Nama Pradana Putri</h3>
 
-Saya merupakan Ambalan
-<b>SMK Bangun Bangsa Mandiri Kandanghaur</b>
-Melalui berbagai aktivitas yang telah dilaksanakan, Ambalan Baranawa
-    berkomitmen untuk membentuk generasi muda yang berakhlak mulia,
-    bertanggung jawab, mandiri, serta memiliki semangat pengabdian
-    kepada masyarakat. Kami berharap portofolio ini dapat memberikan 
-    gambaran mengenai dedikasi, semangat, dan pencapaian Ambalan Baranawa 
-    SMK Bangun Bangsa Mandiri Kandanghaur dalam menjalankan nilai-nilai kepramukaan.
+                <p>
+                    Dewan Ambalan Baranawa
+                </p>
+            </div>
+        </div>
 
-</p>
 
-<a href="#about" class="btn">
-Tentang Saya
-</a>
+        <!-- JURU ADAT -->
+        <div class="anggota-card">
+            <img src="foto/juru-adat.jpg"
+                 alt="Juru Adat">
 
-</div>
+            <div class="anggota-info">
+                <span class="jabatan">
+                    JURU ADAT
+                </span>
 
-<div class="hero-image">
+                <h3>Nama Juru Adat</h3>
 
-<img src="https://pelajarnu.programingcilegeh.my.id/uploads/avatar/avatar_8_1782762268.jpeg" alt="Profile">
+                <p>
+                    Dewan Ambalan Baranawa
+                </p>
+            </div>
+        </div>
 
-</div>
 
-</div>
+        <!-- KRONIS -->
+        <div class="anggota-card">
+            <img src="foto/kronis.jpg"
+                 alt="Kronis">
+
+            <div class="anggota-info">
+                <span class="jabatan">
+                    KRONIS
+                </span>
+
+                <h3>Nama Kronis</h3>
+
+                <p>
+                    Dewan Ambalan Baranawa
+                </p>
+            </div>
+        </div>
+
+
+        <!-- JUANG -->
+        <div class="anggota-card">
+            <img src="foto/juang.jpg"
+                 alt="Juang">
+
+            <div class="anggota-info">
+                <span class="jabatan">
+                    JUANG
+                </span>
+
+                <h3>Nama Juang</h3>
+
+                <p>
+                    Dewan Ambalan Baranawa
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ANGGOTA DEWAN -->
+    <h3 class="sub-title">Anggota Dewan Ambalan</h3>
+
+    <div class="struktur-grid">
+
+        <div class="anggota-card">
+            <img src="foto/anggota-1.jpg"
+                 alt="Anggota Dewan 1">
+
+            <div class="anggota-info">
+                <span class="jabatan">
+                    ANGGOTA DEWAN
+                </span>
+
+                <h3>Nama Anggota 1</h3>
+
+                <p>Dewan Ambalan Baranawa</p>
+            </div>
+        </div>
+
+
+        <div class="anggota-card">
+            <img src="foto/anggota-2.jpg"
+                 alt="Anggota Dewan 2">
+
+            <div class="anggota-info">
+                <span class="jabatan">
+                    ANGGOTA DEWAN
+                </span>
+
+                <h3>Nama Anggota 2</h3>
+
+                <p>Dewan Ambalan Baranawa</p>
+            </div>
+        </div>
+
+
+        <div class="anggota-card">
+            <img src="foto/anggota-3.jpg"
+                 alt="Anggota Dewan 3">
+
+            <div class="anggota-info">
+                <span class="jabatan">
+                    ANGGOTA DEWAN
+                </span>
+
+                <h3>Nama Anggota 3</h3>
+
+                <p>Dewan Ambalan Baranawa</p>
+            </div>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ABOUT -->
 
-<section id="about">
+    <!-- GALERI -->
+    <section id="galeri">
 
-<div class="container">
+        <div class="section-title">
 
-<h2 class="title">Tentang Ambalan Kami</h2>
+            <h2>Galeri Kegiatan</h2>
 
-<p class="subtitle">
-Mengenal lebih dekat tentang Ambalan kami
-</p>
+            <p>
+                Dokumentasi kegiatan Ambalan Baranawa
+            </p>
 
-<div class="glass">
+        </div>
 
-<div class="about-content">
 
-<div>
+        <div class="gallery">
 
-<h2 style="margin-bottom:20px;color:#4cc9f0;">
-BARANAWA
-</h2>
+            <img
+                src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=800&q=80"
+                alt="Kegiatan 1">
 
-<p>
+            <img
+                src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=800&q=80"
+                alt="Kegiatan 2">
 
-Saya adalah Ambalan aktif di
-<b>SMK Bangun Bangsa Mandiri Kandanghaur</b>
-yang memiliki ketertarikan terhadap organisasi,
-kepemimpinan, dan pengembangan karakter.
+            <img
+                src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80"
+                alt="Perkemahan">
 
-<br><br>
+            <img
+                src="https://images.unsplash.com/photo-1539634262233-7c0c7c5b7a4d?auto=format&fit=crop&w=800&q=80"
+                alt="Kegiatan 4">
 
-Kepramukaan menjadi salah satu perjalanan hidup
-yang membentuk pribadi saya menjadi lebih disiplin,
-mandiri, bertanggung jawab, dan mampu bekerja sama
-dalam setiap keadaan.
+            <img
+                src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80"
+                alt="Kegiatan 5">
 
-<br><br>
+            <img
+                src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
+                alt="Kegiatan 6">
 
-Sebagai
-<b>Ambalan Pramuka Penegak </b>,
-saya percaya bahwa setiap tantangan merupakan kesempatan
-untuk belajar dan berkembang menjadi pribadi
-yang lebih baik.
+        </div>
 
-</p>
+    </section>
 
-</div>
 
-<div>
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
 
-<img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900"
-style="width:100%;border-radius:20px;">
+        <h2>Ambalan Baranawa</h2>
 
-</div>
+        <p>
+            🏫 SMK Bangun Bangsa Mandiri
+        </p>
 
-</div>
+        <p>
+            📍 Kandanghaur, Indramayu, Jawa Barat
+        </p>
 
-</div>
+        <p>
+            🇮🇩 Gerakan Pramuka
+        </p>
 
-</div>
 
-</section>
+        <div class="social">
 
-<!-- TIMELINE -->
+            <!-- GANTI LINK DI BAWAH -->
 
-<section id="journey">
+            <a href="#" target="_blank">
+                Instagram
+            </a>
 
-<div class="container">
+            <a href="#" target="_blank">
+                YouTube
+            </a>
 
-<h2 class="title">
-Perjalanan Kepramukaan
-</h2>
+            <a href="#" target="_blank">
+                Facebook
+            </a>
 
-<p class="subtitle">
-Proses pembelajaran dalam Gerakan Pramuka
-</p>
+        </div>
 
-<div class="timeline">
+    </section>
 
-<div class="item">
 
-<div class="icon">
-<i class="fas fa-seedling"></i>
-</div>
+    <!-- FOOTER -->
+    <footer>
 
-<div>
+        <p>
+            © 2026 Ambalan Baranawa -
+            SMK Bangun Bangsa Mandiri Kandanghaur
+        </p>
 
-<h3>Siaga</h3>
+        <p>
+            Dibuat dengan ❤️ oleh Ambalan Baranawa
+        </p>
 
-<p>
-Belajar kemandirian, keberanian, serta mengenal
-dasar-dasar kepramukaan.
-</p>
+    </footer>
 
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="icon">
-<i class="fas fa-users"></i>
-</div>
-
-<div>
-
-<h3>Penggalang</h3>
-
-<p>
-Belajar kerja sama, kepemimpinan,
-dan semangat gotong royong.
-</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="icon">
-<i class="fas fa-campground"></i>
-</div>
-
-<div>
-
-<h3>Penegak Bantara</h3>
-
-<p>
-Mengembangkan kemampuan organisasi,
-pengabdian serta tanggung jawab
-sebagai generasi muda.
-</p>
-
-</div>
-
-</div>
-
-<div class="item">
-
-<div class="icon">
-<i class="fas fa-award"></i>
-</div>
-
-<div>
-
-<h3>Penegak Laksana</h3>
-
-<p>
-
-Tahap yang mengajarkan kepemimpinan,
-pengabdian kepada masyarakat,
-serta menjadi teladan bagi sesama anggota Pramuka.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SKILL -->
-
-<section id="skill">
-
-<div class="container">
-
-<h2 class="title">
-Kemampuan
-</h2>
-
-<p class="subtitle">
-Karakter yang terus dikembangkan ambalan kami
-</p>
-
-<div class="skills">
-
-<div class="skill-card">
-
-<h3>Leadership</h3>
-
-<div class="bar">
-<span style="width:95%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Disiplin</h3>
-
-<div class="bar">
-<span style="width:98%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Kerja Sama</h3>
-
-<div class="bar">
-<span style="width:96%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Tanggung Jawab</h3>
-
-<div class="bar">
-<span style="width:94%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Komunikasi</h3>
-
-<div class="bar">
-<span style="width:90%"></span>
-</div>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Public Speaking</h3>
-
-<div class="bar">
-<span style="width:88%"></span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- GALERI -->
-
-<section id="gallery">
-
-<div class="container">
-
-<h2 class="title">
-Galeri
-</h2>
-
-<p class="subtitle">
-Beberapa dokumentasi kegiatan
-</p>
-
-<div class="gallery">
-
-<img src="https://picsum.photos/500/400?1">
-
-<img src="https://picsum.photos/500/400?2">
-
-<img src="https://picsum.photos/500/400?3">
-
-<img src="https://picsum.photos/500/400?4">
-
-<img src="https://picsum.photos/500/400?5">
-
-<img src="https://picsum.photos/500/400?6">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
-
-<h2 class="title">
-Kontak
-</h2>
-
-<p class="subtitle">
-Mari terhubung
-</p>
-
-<div class="contact">
-
-<div class="card">
-
-<i class="fas fa-school"></i>
-
-<h3>Pangkalan</h3>
-
-<p>
-SMK Bangun Bangsa Mandiri
-Kandanghaur
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-fleur-de-lis"></i>
-
-<h3>Organisasi</h3>
-
-<p>
-Pramuka
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fas fa-envelope"></i>
-
-<h3>Email</h3>
-
-<p>
-baranawapramuka@email.com
-</p>
-
-</div>
-    <div class="card">
-
-<i class="fas fa-envelope"></i>
-
-<h3>Tiktok</h3>
-
-<p>
-pramukabaranawa
-</p>
-
-</div>
-    <div class="card">
-
-<i class="fas fa-envelope"></i>
-
-<h3>instagram</h3>
-
-<p>
-pramuka_baranawa
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>
-
-© 2026 JAYUSMAN
-
-<br>
-
-Pramuka Penegak Laksana •
-SMK Bangun Bangsa Mandiri Kandanghaur
-
-</p>
-
-</footer>
-<!-- BACK TO TOP -->
-
-<button id="topBtn">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<style>
-
-/*============================*/
-/* BACK TO TOP */
-/*============================*/
-
-#topBtn{
-
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-width:55px;
-
-height:55px;
-
-border:none;
-
-border-radius:50%;
-
-background:linear-gradient(45deg,#2563eb,#4cc9f0);
-
-color:white;
-
-font-size:20px;
-
-cursor:pointer;
-
-display:none;
-
-z-index:9999;
-
-box-shadow:0 0 25px rgba(76,201,240,.5);
-
-transition:.3s;
-
-}
-
-#topBtn:hover{
-
-transform:translateY(-6px) scale(1.08);
-
-box-shadow:0 0 45px rgba(76,201,240,.8);
-
-}
-
-.reveal{
-
-opacity:0;
-
-transform:translateY(60px);
-
-transition:1s;
-
-}
-
-.reveal.active{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-</style>
-
-<script>
-
-/*==============================*/
-/* Navbar Scroll */
-/*==============================*/
-
-const header=document.querySelector("header");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>60){
-
-header.style.background="rgba(2,6,23,.85)";
-
-header.style.backdropFilter="blur(18px)";
-
-header.style.boxShadow="0 10px 30px rgba(0,0,0,.4)";
-
-}else{
-
-header.style.background="rgba(255,255,255,.05)";
-
-header.style.boxShadow="none";
-
-}
-
-});
-
-/*==============================*/
-/* Back To Top */
-/*==============================*/
-
-const topBtn=document.getElementById("topBtn");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>400){
-
-topBtn.style.display="block";
-
-}else{
-
-topBtn.style.display="none";
-
-}
-
-});
-
-topBtn.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
-/*==============================*/
-/* Reveal Animation */
-/*==============================*/
-
-const revealElements=document.querySelectorAll(
-
-"section,.glass,.skill-card,.item,.gallery img,.card"
-
-);
-
-revealElements.forEach(el=>{
-
-el.classList.add("reveal");
-
-});
-
-function reveal(){
-
-const reveals=document.querySelectorAll(".reveal");
-
-for(let i=0;i<reveals.length;i++){
-
-let windowHeight=window.innerHeight;
-
-let revealTop=reveals[i].getBoundingClientRect().top;
-
-let revealPoint=120;
-
-if(revealTop<windowHeight-revealPoint){
-
-reveals[i].classList.add("active");
-
-}
-
-}
-
-}
-
-window.addEventListener("scroll",reveal);
-
-reveal();
-
-/*==============================*/
-/* Active Menu */
-/*==============================*/
-
-const sections=document.querySelectorAll("section");
-
-const navLinks=document.querySelectorAll("nav ul li a");
-
-window.addEventListener("scroll",()=>{
-
-let current="";
-
-sections.forEach(section=>{
-
-const sectionTop=section.offsetTop-120;
-
-const sectionHeight=section.clientHeight;
-
-if(pageYOffset>=sectionTop){
-
-current=section.getAttribute("id");
-
-}
-
-});
-
-navLinks.forEach(link=>{
-
-link.classList.remove("active");
-
-if(link.getAttribute("href")==="#"+current){
-
-link.classList.add("active");
-
-}
-
-});
-
-});
-
-/*==============================*/
-/* Smooth Hover */
-/*==============================*/
-
-document.querySelectorAll("nav a").forEach(link=>{
-
-link.addEventListener("mouseenter",()=>{
-
-link.style.transform="translateY(-2px)";
-
-});
-
-link.addEventListener("mouseleave",()=>{
-
-link.style.transform="translateY(0)";
-
-});
-
-});
-
-/*==============================*/
-/* Typing Effect */
-/*==============================*/
-
-const title=document.querySelector(".hero-text h2");
-
-const text=title.innerHTML;
-
-title.innerHTML="";
-
-let i=0;
-
-function typing(){
-
-if(i<text.length){
-
-title.innerHTML+=text.charAt(i);
-
-i++;
-
-setTimeout(typing,70);
-
-}
-
-}
-
-typing();
-
-</script>
 
 </body>
-  </html>
+</html>
