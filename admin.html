@@ -256,8 +256,8 @@
             Juang dan Anggota Dewan.
           </p>
 
-     <button onclick="kelolaStruktur()">
-
+     <button onclick="kelolaStruktur()">kelola
+</button>
         </div>
 
 
@@ -467,8 +467,12 @@ onAuthStateChanged(auth, (user) => {
     adminPanel.style.display = "none";
   }
 });
-window.kelolaStruktur = function () {
-  alert("Menu Struktur Ambalan berhasil dibuka.");
+window.logout = async function () {
+  try {
+    await signOut(auth);
+  } catch (err) {
+    console.error(err);
+  }
 };
 </script>
 
