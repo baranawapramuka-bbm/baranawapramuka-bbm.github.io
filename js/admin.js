@@ -6,48 +6,76 @@ import {
 
 import { auth } from "./firebase.js";
 
-const loginForm = document.getElementById("loginForm");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const loginMessage = document.getElementById("loginMessage");
 
-const loginBox = document.getElementById("loginBox");
-const adminPanel = document.getElementById("adminPanel");
-const logoutButton = document.getElementById("logoutButton");
+window.login = async function () {
 
-loginForm?.addEventListener("submit", async (event) => {
-  event.preventDefault();
+  const email =
+    document.getElementById("username").value.trim();
 
-  const email = emailInput.value.trim();
-  const password = passwordInput.value;
+  const password =
+    document.getElementById("password").value;
 
-  loginMessage.textContent = "Sedang masuk...";
+  const error =
+    document.getElementById("error");
+
+  error.style.display = "none";
 
   try {
-    await signInWithEmailAndPassword(auth, email, password);
 
-    loginMessage.textContent = "Login berhasil.";
-  } catch (error) {
-    console.error(error);
+    await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
 
-    if (error.code === "auth/invalid-credential") {
-      loginMessage.textContent = "Email atau password salah.";
-    } else {
-      loginMessage.textContent = "Login gagal. Silakan coba lagi.";
-    }
+  } catch (err) {
+
+    console.error(err);
+
+    error.textContent =
+      "Email atau password salah.";
+
+    error.style.display = "block";
   }
-});
+};
+
+
+window.logout = async function () {
+
+  try {
+
+    await signOut(auth);
+
+  } catch (err) {
+
+    console.error(err);
+
+  }
+
+};
+
 
 onAuthStateChanged(auth, (user) => {
-  if (user) {
-    loginBox.style.display = "none";
-    adminPanel.style.display = "block";
-  } else {
-    loginBox.style.display = "block";
-    adminPanel.style.display = "none";
-  }
-});
 
-logoutButton?.addEventListener("click", async () => {
-  await signOut(auth);
+  const loginPage =
+    document.getElementById("loginPage");
+
+  const adminPanel =
+    document.getElementById("adminPanel");
+
+
+  if (user) {
+
+    loginPage.style.display = "none";
+
+    adminPanel.style.display = "block";
+
+  } else {
+
+    loginPage.style.display = "flex";
+
+    adminPanel.style.display = "none";
+
+  }
+
 });
