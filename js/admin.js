@@ -85,3 +85,24 @@ onAuthStateChanged(auth, (user) => {
 window.kelolaStruktur = function () {
   alert("Menu Struktur Ambalan berhasil dibuka.");
 };
+async function bacaAnggota() {
+
+  try {
+
+    const snapshot = await getDocs(
+      collection(db, "anggota")
+    );
+
+    snapshot.forEach((doc) => {
+
+      console.log(doc.id, doc.data());
+
+    });
+
+  } catch (error) {
+
+    console.error("Gagal membaca anggota:", error);
+
+  }
+
+}
