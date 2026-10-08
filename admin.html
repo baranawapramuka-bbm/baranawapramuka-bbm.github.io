@@ -369,7 +369,6 @@
   </div>
 
 <script type="module">
-
 import {
   initializeApp
 } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
@@ -381,9 +380,8 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyA8z8M6ein6CtXwxX2FDeo-gPQEjb78Zo",
+  apiKey: "AIzaSyA8z8M6ein6CtXwxnX2FDeo-gPQEjb78Zo",
   authDomain: "ambalan-baranawa-web.firebaseapp.com",
   projectId: "ambalan-baranawa-web",
   storageBucket: "ambalan-baranawa-web.firebasestorage.app",
@@ -391,75 +389,43 @@ const firebaseConfig = {
   appId: "1:669276140639:web:a40c02ad4bb1a9f04a97ea"
 };
 
-
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-
 window.login = async function () {
-
-  const email =
-    document.getElementById("username").value.trim();
-
-  const password =
-    document.getElementById("password").value;
-
-  const error =
-    document.getElementById("error");
+  const email = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+  const error = document.getElementById("error");
 
   error.style.display = "none";
 
   try {
-
-    await signInWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-
+    await signInWithEmailAndPassword(auth, email, password);
   } catch (err) {
-
     console.error(err);
-
-    error.textContent =
-      "Email atau password salah.";
-
+    error.textContent = "Email atau password salah.";
     error.style.display = "block";
   }
 };
 
-
 window.logout = async function () {
-
   await signOut(auth);
-
 };
 
-
 onAuthStateChanged(auth, (user) => {
-
-  const loginPage =
-    document.getElementById("loginPage");
-
-  const adminPanel =
-    document.getElementById("adminPanel");
-
+  const loginPage = document.getElementById("loginPage");
+  const adminPanel = document.getElementById("adminPanel");
 
   if (user) {
-
     loginPage.style.display = "none";
     adminPanel.style.display = "block";
-
   } else {
-
     loginPage.style.display = "flex";
     adminPanel.style.display = "none";
-
   }
-
 });
-
 </script>
+
 
 </body>
 </html>
