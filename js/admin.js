@@ -4,7 +4,7 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 
-import { auth } from "./firebase.js";
+import { auth,db } from "./firebase.js";
 
 
 window.login = async function () {
