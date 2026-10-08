@@ -79,3 +79,6 @@ onAuthStateChanged(auth, (user) => {
   }
 
 });
+window.kelolaStruktur = function () {
+  alert("Menu Struktur Ambalan berhasil dibuka.");
+};
