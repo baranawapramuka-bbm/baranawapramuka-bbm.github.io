@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
-
+import { getFirestore } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js";
 const firebaseConfig = {
   apiKey: "AIzaSyA8z8M6ein6CtXwxnX2FDeo-gPQEjb78Zo",
   authDomain: "ambalan-baranawa-web.firebaseapp.com",
