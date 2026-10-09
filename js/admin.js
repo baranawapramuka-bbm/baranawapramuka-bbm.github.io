@@ -69,9 +69,13 @@ onAuthStateChanged(auth, (user) => {
 
   if (user) {
 
-    loginPage.style.display = "none";
+  loginPage.style.display = "none";
 
-    adminPanel.style.display = "block";
+  adminPanel.style.display = "block";
+
+  bacaAnggota();
+
+}
 
   } else {
 
